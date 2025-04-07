@@ -95,6 +95,8 @@ A simple one-layer neural network is trained on pairwise differences in CLIP rew
 - **Cumulative Reward per Episode:** Indicates overall performance.
 - **Pole Angle Distribution:** Verifies that the agent maintains a balanced (0°) pole.
 - **Pole Angle vs. Reward Scatter Plot:** Should show high rewards around 0° and decreasing rewards as the pole deviates.
+- ![episode_rewards](https://github.com/user-attachments/assets/546caf22-5c7e-4a28-bc1b-ca8cdf9fee74)
+
 
 ---
 
