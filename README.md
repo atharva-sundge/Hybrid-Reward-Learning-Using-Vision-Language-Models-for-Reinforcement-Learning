@@ -120,7 +120,8 @@ A simple one-layer neural network is trained on pairwise differences in CLIP rew
 
 #### Hybrid Model Results
 - Cumulative Reward per Episode:
-- ![pole_angle_vs_reward](https://github.com/user-attachments/assets/17f361ac-c89a-43eb-b9ae-f383f44597ab)
+- ![episode_rewards](https://github.com/user-attachments/assets/df7a5f61-7275-4fe8-9810-d129363036d1)
+
 
  This plot shows the cumulative reward per episode when training with the hybrid reward (CLIP + preference-based reward). The hybrid model is expected to achieve higher and more stable rewards as the additional preference feedback refines the raw CLIP reward.
 
