@@ -1,0 +1,10 @@
+!pip install --upgrade pip
+!pip install gymnasium
+!pip install stable-baselines3
+!pip install numpy
+!pip install matplotlib
+!pip install pillow
+!pip install git+https://github.com/openai/CLIP.git
+
+# For PyTorch
+!pip install torch==2.0.1+cu118 torchvision==0.15.2+cu118 torchaudio==2.0.2 --extra-index-url https://download.pytorch.org/whl/cu118
