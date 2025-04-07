@@ -95,7 +95,44 @@ A simple one-layer neural network is trained on pairwise differences in CLIP rew
 - **Cumulative Reward per Episode:** Indicates overall performance.
 - **Pole Angle Distribution:** Verifies that the agent maintains a balanced (0°) pole.
 - **Pole Angle vs. Reward Scatter Plot:** Should show high rewards around 0° and decreasing rewards as the pole deviates.
-- ![episode_rewards](https://github.com/user-attachments/assets/546caf22-5c7e-4a28-bc1b-ca8cdf9fee74)
+
+  
+### Results:
+#### Baseline Model Results
+- Cumulative Reward per Episode:
+- ![episode_rewards_baseline](https://github.com/user-attachments/assets/2d1f7c3b-70eb-492b-8123-3fd3e0377390)
+ This plot shows the cumulative rewards obtained in each episodes when training the baseline (CLIP-based reward) model.
+ 
+ The baseline model's cumulative rewards shows lower performance and higher variance compared to the hybrid approach.
+
+
+- Pole Angle Distribution:
+- ![pole_angles_baseline](https://github.com/user-attachments/assets/ea8b26c6-730b-4101-bd60-380a0c2ff1bf)
+
+ This plot illustrates the distribution of the pole angle (converted to degrees) over timesteps for the baseline model.Ideally, most angles should cluster around 0° if the pole is balanced, but the baseline may show a wider spread which indicates instability in model training.
+
+
+- Pole Angle vs. Reward plot:
+- ![pole_angle_vs_reward_baseline](https://github.com/user-attachments/assets/bc9f77db-1704-4623-89ca-de40f1f06863)
+ A scatter plot showing the relationship between pole angle and the reward at each step for the baseline model. For a well-performing policy, high rewards should be concentrated near 0° (balanced pole) and decrease as the pole deviates. In the baseline, the relationship is less distinct.
+
+
+
+#### Hybrid Model Results
+- Cumulative Reward per Episode:
+- ![pole_angle_vs_reward_baseline](https://github.com/user-attachments/assets/4ad78177-a2cc-4fb8-bc9f-055ba5bf1185)
+ This plot shows the cumulative reward per episode when training with the hybrid reward (CLIP + preference-based reward). The hybrid model is expected to achieve higher and more stable rewards as the additional preference feedback refines the raw CLIP reward.
+
+
+- Pole Angle Distribution:
+- ![pole_angles](https://github.com/user-attachments/assets/d0eb159b-b635-4787-9efd-17713f3daa24)
+ This plot presents the distribution of the pole angle (in degrees) across timesteps for the hybrid model. A tighter clustering around 0° indicates that the agent is better at maintaining balance.
+
+
+- Pole Angle vs. Reward plot:
+- ![pole_angle_vs_reward](https://github.com/user-attachments/assets/4036b167-7e19-49a1-bbeb-a23e80afc2d4)
+ A scatter plot showing the correlation between the pole angle and the reward for the hybrid model. Ideally, this plot should show high rewards for angles near 0° with a smooth, Gaussian-like decay as the angle increases, demonstrating improved reward alignment.
+
 
 
 ---
@@ -121,3 +158,5 @@ Instructions for loading the models for inference are provided in the training a
 ## License
 
 This project is licensed under the MIT License. 
+
+Thank you!
